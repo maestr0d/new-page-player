@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style type="text/css">
+		*{
+			box-sizing:border-box;
+			padding:0px;
+			margin:0px;
+			font-family:Helvetica, sans-serif;
+		}
+		body{
+			background-color:#222;
+		}
+		.container{
+			position:absolute;
+			top:50%;
+			left:50%;
+			transform:translate(-50%, -50%);
+		}
+		.player-body{
+			width:900px;
+			height:45px;
+			padding:5px;
+			display:flex;
+			background-color:#111;
+		}
+		.control{
+			display:inline-block;
+			height:35px;
+			flex:0 0 35px;
+			text-align:center;
+			line-height:35px;
+			font-size:20px;
+			color:white;
+			text-decoration:none;
+			text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);
+		}
+		.control-2{
+			display:inline-block;
+			height:35px;
+			text-align:center;
+			padding-left:5px;
+			padding-right:5px;
+			line-height:35px;
+			font-size:17px;
+			color:white;
+			text-decoration:none;
+			text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);
+		}
+		.mr{
+			margin-right:7.5px;
+		}
+		input[type="range"]{
+			flex-grow:1;
+			height:35px;
+		}
+		input[type=range]::-moz-range-track {
+			cursor: pointer;
+		  	background: #333;
+		  	height:5px;
+		}
+		input[type=range]::-moz-range-thumb {
+			cursor: pointer;
+			border-radius:4px;
+			width:16px;
+		  	height:10px;
+			background-color:#222;
+			border:1px solid black;
+		}
+		input[type="range"]::-moz-range-progress {
+		  	background-color: #43e5f7; 
+		  	height:5px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="player-body">
+			<a href="#" class="control mr"><i class="fa fa-play"></i></a>
+			<input type="range" id="prog" class="mr" min="1" max="100" step="1" value="1">
+			<a href="#" class="control-2 mr">5:20/10:00</a>
+			<a href="#" class="control mr"><i class="fa fa-volume-up"></i></a>
+			<a href="#" class="control"><i class="fa fa-download"></i></a>
+		</div>
+	</div>
+  <script src="test.js"></script>
+</body>
+</html>
